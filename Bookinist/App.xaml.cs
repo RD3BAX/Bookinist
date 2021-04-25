@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
+using Bookinist.Data;
 using Bookinist.Services;
 using Bookinist.ViewModels;
 
@@ -20,6 +21,7 @@ namespace Bookinist
         public static IServiceProvider Services => Host.Services;
 
         internal static void ConfigureServices(HostBuilderContext host, IServiceCollection services) => services
+            .AddDatabase(host.Configuration.GetSection("Database"))
             .AddServices()
             .AddViewModels()
         ;
