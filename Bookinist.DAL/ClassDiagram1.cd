@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bookinist.DAL.Entities.Base.Entity">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Base\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Base.NamedEntity">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Base\NamedEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Base.Person">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Base\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Book" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Entities\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Buyer">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Buyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Category" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Deal">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAABAAAAQAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Entities\Deal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bookinist.DAL.Entities.Seller">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Seller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

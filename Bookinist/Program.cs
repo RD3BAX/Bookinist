@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
@@ -9,6 +9,8 @@ namespace Bookinist
         [STAThread]
         static void Main(string[] args)
         {
+            EntityFrameworkProfilerBootstrapper.PreStart();
+
             var app = new App();
             app.InitializeComponent();
             app.Run();
@@ -19,3 +21,4 @@ namespace Bookinist
             .ConfigureServices(App.ConfigureServices);
     }
 }
+
