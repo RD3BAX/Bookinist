@@ -27,14 +27,14 @@ namespace Bookinist.Data
 
             // Удаляет базу данных (нужен при начальной отладке)
             _logger.LogInformation("Удаление существующей БД...");
-            await _db.Database.EnsureDeletedAsync()/*.ConfigureAwait(false)*/;
+            await _db.Database.EnsureDeletedAsync().ConfigureAwait(false);
             _logger.LogInformation("Удаление существующей БД выполнено за {0} мс", timer.ElapsedMilliseconds);
 
             //_db.Database.EnsureCreated();
 
             // Позволяет создать базу данных если ее нет, а также накатить изменения на уже существующую
             _logger.LogInformation("Миграция БД...");
-            await _db.Database.MigrateAsync();
+            await _db.Database.MigrateAsync().ConfigureAwait(false);
             _logger.LogInformation("Миграция БД выполнена за {0} мс", timer.ElapsedMilliseconds);
 
             if (await _db.Books.AnyAsync()) return;

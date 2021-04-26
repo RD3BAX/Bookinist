@@ -9,7 +9,8 @@ namespace Bookinist
         [STAThread]
         static void Main(string[] args)
         {
-            EntityFrameworkProfilerBootstrapper.PreStart();
+            //EntityFrameworkProfilerBootstrapper.PreStart();
+            HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 
             var app = new App();
             app.InitializeComponent();
