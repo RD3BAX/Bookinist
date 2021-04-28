@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Bookinist.DAL
 {
-    class DbRepository<T> : IRepository<T> where T : Entity, new()
+    internal class DbRepository<T> : IRepository<T> where T : Entity, new()
     {
         #region Поля
 
