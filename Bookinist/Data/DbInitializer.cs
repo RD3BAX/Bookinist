@@ -25,10 +25,10 @@ namespace Bookinist.Data
             var timer = Stopwatch.StartNew();
             _logger.LogInformation("Инициализация БД...");
 
-            // Удаляет базу данных (нужен при начальной отладке)
-            _logger.LogInformation("Удаление существующей БД...");
-            await _db.Database.EnsureDeletedAsync().ConfigureAwait(false);
-            _logger.LogInformation("Удаление существующей БД выполнено за {0} мс", timer.ElapsedMilliseconds);
+            //// Удаляет базу данных (нужен при начальной отладке)
+            //_logger.LogInformation("Удаление существующей БД...");
+            //await _db.Database.EnsureDeletedAsync().ConfigureAwait(false);
+            //_logger.LogInformation("Удаление существующей БД выполнено за {0} мс", timer.ElapsedMilliseconds);
 
             //_db.Database.EnsureCreated();
 
