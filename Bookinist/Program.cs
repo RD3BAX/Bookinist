@@ -10,7 +10,7 @@ namespace Bookinist
         {
 #if DEBUG
             //EntityFrameworkProfilerBootstrapper.PreStart();
-            HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
+            //HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 #endif
             var app = new App();
             app.InitializeComponent();
