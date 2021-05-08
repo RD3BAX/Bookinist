@@ -19,7 +19,10 @@ namespace Bookinist.Data
                     default: throw new InvalidOperationException($"Тип подключения {type} не поддерживается");
 
                     case "MSSQL":
-                        opt.UseSqlServer(configuration.GetConnectionString(type));
+                        opt.UseSqlServer(
+                            configuration.GetConnectionString(type),
+                            x => x.MigrationsAssembly("Bookinist.DAL.SqlServerMigrations")
+                            );
                         break;
                     case "SQLite":
                         opt.UseSqlite(configuration.GetConnectionString(type));

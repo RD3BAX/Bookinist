@@ -1,0 +1,1 @@
+﻿Add-Migration NewMigration -Project Bookinist.DAL.SqlServerMigrations

@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Bookinist.DAL.SqlServerMigrations\Bookinist.DAL.SqlServerMigrations.csproj" />
     <ProjectReference Include="..\Bookinist.DAL\Bookinist.DAL.csproj" />
   </ItemGroup>
 
