@@ -14,7 +14,7 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <TabControl>
-        <TabItem Header="Книги">
+        <TabItem Header="Книги" Margin="-4,-2,0,0">
             <GroupBox Header="Бестселлеры">
                 <DataGrid ItemsSource="{Binding BestSellers}" IsReadOnly="True">
                     <DataGrid.Columns>
