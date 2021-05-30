@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Linq;
 using System.Windows;
 using Bookinist.Data;
 using Bookinist.Services;
@@ -13,6 +14,25 @@ namespace Bookinist
     /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// Возвращает активное окно
+        /// </summary>
+        public static Window ActiveWindow => Application.Current.Windows
+                .OfType<Window>()
+                .FirstOrDefault(w => w.IsActive);
+
+        /// <summary>
+        /// Возвращает окно с фокусом ввода
+        /// </summary>
+        public static Window FocusedWindow => Application.Current.Windows
+            .OfType<Window>()
+            .FirstOrDefault(w => w.IsFocused);
+
+        /// <summary>
+        /// Возвращает текущие активное окно
+        /// </summary>
+        public static Window CurrentWindow => FocusedWindow ?? ActiveWindow;
+
         public static bool IsDesignTime { get; private set; } = true;
 
         private static IHost __Host;

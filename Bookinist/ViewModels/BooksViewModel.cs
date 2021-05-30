@@ -135,9 +135,11 @@ namespace Bookinist.ViewModels
         {
             var new_book = new Book();
 
-            if(_UserDialog.Edit(new_book)) return;
+            if(!_UserDialog.Edit(new_book)) return;
 
             _Books.Add(_BooksRepository.Add(new_book));
+
+            SelectedBook = new_book;
         }
 
         #endregion // AddNewBookCommand
@@ -158,6 +160,10 @@ namespace Bookinist.ViewModels
         private void OnRemoveBookCommandExecuted(Book p)
         {
             var book_to_remove = p ?? SelectedBook;
+
+            //todo: запрос к пользователю
+
+            _BooksRepository.Remove(book_to_remove.Id);
         }
 
         #endregion // RemoveBookCommand
