@@ -78,7 +78,10 @@ namespace Bookinist.DAL
             //if (item is null) return;
             //_db.Entry(item).State = EntityState.Deleted;
 
-            _db.Remove(new T {Id = id});
+            // Если сущность есть в кеше то она будет передана на удаление
+            var item = _Set.Local.FirstOrDefault(i => i.Id == id) ?? new T {Id = id};
+
+            _db.Remove(item);
 
             if (AutoSaveChanges)
                 _db.SaveChanges();

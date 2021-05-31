@@ -161,9 +161,14 @@ namespace Bookinist.ViewModels
         {
             var book_to_remove = p ?? SelectedBook;
 
-            //todo: запрос к пользователю
+            if (!_UserDialog.ConfirmWarning($"Вы хотите удалить книгу {book_to_remove.Name}?", "Удаление книги"))
+                return;
 
             _BooksRepository.Remove(book_to_remove.Id);
+
+            Books.Remove(book_to_remove);
+            if (ReferenceEquals(SelectedBook, book_to_remove))
+                SelectedBook = null;
         }
 
         #endregion // RemoveBookCommand
