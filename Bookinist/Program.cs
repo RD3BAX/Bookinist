@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
 namespace Bookinist
@@ -9,9 +8,10 @@ namespace Bookinist
         [STAThread]
         static void Main(string[] args)
         {
+#if DEBUG
             //EntityFrameworkProfilerBootstrapper.PreStart();
-            HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
-
+            //HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
+#endif
             var app = new App();
             app.InitializeComponent();
             app.Run();

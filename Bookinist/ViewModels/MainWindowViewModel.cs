@@ -11,6 +11,7 @@ namespace Bookinist.ViewModels
     {
         #region Поля
 
+        private readonly IUserDialog _userDialog;
         private readonly IRepository<Book> _books;
         private readonly IRepository<Seller> _sellers;
         private readonly IRepository<Buyer> _buyers;
@@ -67,7 +68,7 @@ namespace Bookinist.ViewModels
         /// <summary>Логика выполнения - Отобразить представление книг</summary>
         private void OnShowBooksViewCommandExecuted(object p)
         {
-            CurrentModel = new BooksViewModel(_books);
+            CurrentModel = new BooksViewModel(_books, _userDialog);
         }
 
         #endregion // ShowBooksViewCommand
@@ -135,6 +136,7 @@ namespace Bookinist.ViewModels
         #region Конструктор
 
         public MainWindowViewModel(
+            IUserDialog UserDialog,
             IRepository<Book> Books, 
             IRepository<Seller> Sellers,
             IRepository<Buyer> Buyers,
@@ -142,7 +144,8 @@ namespace Bookinist.ViewModels
             ISalesService SalesService)
         {
             Title = "Главное окно программы";
-            
+
+            _userDialog = UserDialog;
             _books = Books;
             _sellers = Sellers;
             _buyers = Buyers;
